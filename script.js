@@ -8,5 +8,8 @@ const seconds = document.getElementById("seconds");
 let newYears = "";
 
 const myTimer = () => {
-    
+    const date = new Date().getTime();
+    console.log(date);
 }
+
+myTimer();
