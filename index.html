@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Event Timer</title>
+</head>
+<body>
+    <div class="event-container">
+        <h1 class="title">Countdown Timer</h1>
+        <h2 class="myEvent">My Event</h2>
+        <div class="control">
+            <p id="control-gear">&#9881;</p>
+            <div class="div control-description">Set Event</div>
+        </div>
+        <div class="control-container">
+            <input type="text" id="setEvent">
+            <button id="setEventBtn" class="btn">Set Event</button>
+            <input type="date" id="setEvent">
+            <button id="setDateBtn" class="btn">Set Date</button>
+        </div>
+    </div>
+    <div class="timer-container">
+        <div class="days-container">
+            <div id="days">0</div>
+            <span>Days</span>
+        </div>
+        <div class="hours-container">
+            <div id="hours">0</div>
+            <span>Hours</span>
+        </div>
+        <div class="minutes-container">
+            <div id="minutes">0</div>
+            <span>Minutes</span>
+        </div>
+        <div class="seconds-container">
+            <div id="seconds">0</div>
+            <span>seconds</span>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
