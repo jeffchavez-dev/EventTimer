@@ -1,8 +1,12 @@
 const myEvent = document.querySelector(".myEvent")
-const days = document.getElementById("days");
-const hours = document.getElementById("hours");
-const minutes = document.getElementById("minutes");
-const seconds = document.getElementById("seconds");
+const gear = document.getElementById("control-gear");
+const controls = document.getElementById("control-container");
+const setDateEvent = document.getElementById("setDateEvent");
+
+
+gear.addEventListener('click', () => {
+    controls.classList.toggle('.show');
+})
 
 
 let eventDate = "01 Jan 2023";
@@ -18,12 +22,21 @@ const myTimer = () => {
    
 
     //Get seconds, minutes, hours, & days
-    const timeSeconds = Math.floor(reversedCount) % 60;
+   
+    const days = Math.floor(reversedCount / 3600 / 24);
+    const hours = Math.floor(reversedCount / 3600) % 24;
+    const minutes = (Math.floor(reversedCount / 60) % 24) % 60;
+    const seconds = Math.floor(reversedCount) % 60;
 
-    seconds.innerText = timeSeconds; 
-    console.log(timeSeconds);
-
+    document.getElementById("days").innerText = days; 
+    document.getElementById("hours").innerText = hours; 
+    document.getElementById("minutes").innerText = timeFormat(minutes); 
+    document.getElementById("seconds").innerText = timeFormat(seconds); 
 }
 
+
+const timeFormat = (time) => {
+    return time < 10 ? (`0${time}`) : time;
+}
 
 setInterval(myTimer, 1000);

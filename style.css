@@ -25,6 +25,14 @@ body {
     gap: .5em;
 }
 
+.show {
+    display: none;
+}
+
+#control-gear {
+    cursor: pointer;
+}
+
 /* event */
 .timer-container {
     display: flex;
