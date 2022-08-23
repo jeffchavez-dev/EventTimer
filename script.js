@@ -1,18 +1,38 @@
 const myEvent = document.querySelector(".myEvent")
 const gear = document.getElementById("control-gear");
-const controls = document.getElementById("control-container");
+const controls = document.getElementById("controls");
+const setEvent = document.getElementById("setEvent");
+const setEventBtn = document.getElementById("setEventBtn");
+const setDateBtn = document.getElementById("setDateBtn");
 const setDateEvent = document.getElementById("setDateEvent");
 
 
 gear.addEventListener('click', () => {
-    controls.classList.toggle('.show');
+    controls.classList.toggle('show');
+})
+
+setEventBtn.addEventListener('click', () => {
+    myEvent.innerText = setEvent.value;
+})
+setEventBtn.addEventListener('keypress', (e) => {
+    if(e.keycode === 13) {
+        myEvent.innerHTML = setEvent.value;
+    }
+  
 })
 
 
-let eventDate = "01 Jan 2023";
+let eventDate = "";
+setDateBtn.addEventListener('click', () => {
+    eventDate = setDateEvent.value;
+})
+
+
 
 const myTimer = () => {
-    
+if(eventDate == "") {
+    return 0;
+} else {
     const newDate = new Date(eventDate).getTime();
     const currentDate = new Date().getTime();
 
@@ -32,6 +52,9 @@ const myTimer = () => {
     document.getElementById("hours").innerText = hours; 
     document.getElementById("minutes").innerText = timeFormat(minutes); 
     document.getElementById("seconds").innerText = timeFormat(seconds); 
+
+}
+   
 }
 
 

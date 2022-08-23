@@ -18,7 +18,7 @@ body {
 }
 
 .control-container {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -26,11 +26,28 @@ body {
 }
 
 .show {
-    display: none;
+    display: flex;
 }
 
+.control {
+    position: relative;
+}
 #control-gear {
     cursor: pointer;
+}
+
+#control-gear:hover + .control-description {
+    display: block;
+}
+
+.control-description {
+    display: none;
+    position: absolute;
+    background-color: rgba(0,0,0,0.3);
+    top: 3px;
+    right: 60px;
+    font-size: .8em;
+    padding: 2px 3px;
 }
 
 /* event */
