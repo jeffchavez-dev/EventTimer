@@ -14,9 +14,13 @@ gear.addEventListener('click', () => {
 setEventBtn.addEventListener('click', () => {
     myEvent.innerText = setEvent.value;
 })
-setEventBtn.addEventListener('keypress', (e) => {
+
+
+setEvent.addEventListener('keyup', (e) => {
     if(e.keycode === 13) {
         myEvent.innerHTML = setEvent.value;
+        setEvent.setAttribute("value", "New");
+        console.log(setEvent);
     }
   
 })
@@ -25,6 +29,7 @@ setEventBtn.addEventListener('keypress', (e) => {
 let eventDate = "";
 setDateBtn.addEventListener('click', () => {
     eventDate = setDateEvent.value;
+   
 })
 
 
