@@ -16,7 +16,7 @@ setEventBtn.addEventListener('click', () => {
 })
 
 
-setEvent.addEventListener('keyup', (e) => {
+setEvent.addEventListener('keyup', (e)=> {
     if(e.keycode === 13) {
         myEvent.innerHTML = setEvent.value;
         setEvent.setAttribute("value", "New");
@@ -46,13 +46,14 @@ if(eventDate == "") {
     const reversedCount = Math.floor((newDate - currentDate) / 1000);
    
 
-    //Get seconds, minutes, hours, & days
+    // Get seconds, minutes, hours, & days
    
     const days = Math.floor(reversedCount / 3600 / 24);
     const hours = Math.floor(reversedCount / 3600) % 24;
     const minutes = (Math.floor(reversedCount / 60) % 24) % 60;
     const seconds = Math.floor(reversedCount) % 60;
 
+    // set seconds, minutes, hours, & days
     document.getElementById("days").innerText = days; 
     document.getElementById("hours").innerText = hours; 
     document.getElementById("minutes").innerText = timeFormat(minutes); 
