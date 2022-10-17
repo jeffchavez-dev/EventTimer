@@ -126,6 +126,14 @@ input[type="text"], input[type="date"] {
     color: white;
 }
 
+@media only screen and (max-width: 600px) {
+    .bigtext {
+      font-size: 3em;
+    }
+  }
+    
+
+
 span {
     color: rgba(252, 246, 246, 0.6);
 }
