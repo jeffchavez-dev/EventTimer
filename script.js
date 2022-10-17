@@ -72,7 +72,16 @@ const timeFormat = (time) => {
 
 setInterval(myTimer, 1000);
 
-
+const newBackground = document.getElementById('new-background')
+const uploadImage = "";
 changeBackgroundBtn.addEventListener('click', () => {
-    console.log(file.value)
+
+    const reader = new FileReader();
+    reader.addEventListener('load', () => {
+        uploadImage = reader.result;
+        newBackground.style.backgroundImage = `url(${uploadImage})`;
+    });
+    reader.readAsDataURL(this.files[0]);
+
+
 })
