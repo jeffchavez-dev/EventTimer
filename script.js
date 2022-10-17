@@ -6,7 +6,7 @@ const setEventBtn = document.getElementById("setEventBtn");
 const setDateBtn = document.getElementById("setDateBtn");
 const setDateEvent = document.getElementById("setDateEvent");
 const file = document.getElementById("fileUpload");
-const changeBackgroundBtn= document.getElementById("changeBackgroundBtn");
+const changeBackgroundBtn = document.getElementById("changeBackgroundBtn");
 
 
 gear.addEventListener('click', () => {
@@ -74,7 +74,7 @@ setInterval(myTimer, 1000);
 
 const newBackground = document.getElementById('new-background')
 let uploadImage = "";
-changeBackgroundBtn.addEventListener('click', () => {
+file.addEventListener('change', () => {
 
     const reader = new FileReader();
     const file = document.querySelector('input[type=file]').files[0];
