@@ -63,18 +63,18 @@ body {
     color: rgba(0,0,0,0.5)
 }
 
-#control-gear:hover + .control-description {
+/* #control-gear:hover + .control-description {
     display: block;
-}
+} */
 
 .control-description {
     display: none;
-    position: absolute;
+    /* position: absolute;
     background-color: rgba(0,0,0,0.3);
     top: 3px;
     right: 70px;
     font-size: .8em;
-    padding: 2px 3px;
+    padding: 2px 3px; */
 }
 
 .btn {
