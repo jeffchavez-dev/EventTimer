@@ -73,15 +73,16 @@ const timeFormat = (time) => {
 setInterval(myTimer, 1000);
 
 const newBackground = document.getElementById('new-background')
-const uploadImage = "";
+let uploadImage = "";
 changeBackgroundBtn.addEventListener('click', () => {
 
     const reader = new FileReader();
-    reader.addEventListener('load', () => {
+    const file = document.querySelector('input[type=file]').files[0];
+    reader.addEventListener('load', (files) => {
         uploadImage = reader.result;
         newBackground.style.backgroundImage = `url(${uploadImage})`;
     });
-    reader.readAsDataURL(this.files[0]);
+    reader.readAsDataURL(file);
 
 
 })
