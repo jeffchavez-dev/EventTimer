@@ -5,6 +5,8 @@ const setEvent = document.getElementById("setEvent");
 const setEventBtn = document.getElementById("setEventBtn");
 const setDateBtn = document.getElementById("setDateBtn");
 const setDateEvent = document.getElementById("setDateEvent");
+const file = document.getElementById("fileUpload");
+const changeBackgroundBtn= document.getElementById("changeBackgroundBtn");
 
 
 gear.addEventListener('click', () => {
@@ -69,3 +71,8 @@ const timeFormat = (time) => {
 }
 
 setInterval(myTimer, 1000);
+
+
+changeBackgroundBtn.addEventListener('click', () => {
+    console.log(file.value)
+})
