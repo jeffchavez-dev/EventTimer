@@ -5,9 +5,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(clock-g8839b8f0b_1920.jpg);
 }
-
+#new-background {
+    background-position: center;
+    background-size: cover;
+}
 * {
     margin: 0;
     padding: 0;
